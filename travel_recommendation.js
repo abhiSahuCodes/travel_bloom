@@ -5,7 +5,7 @@ async function fetchData() {
 
 document
   .getElementById("search")
-  .addEventListener("keypress", function (event) {
+  .addEventListener("keydown", function (event) {
     if (event.key === "Enter") {
       searchFunction();
     }
