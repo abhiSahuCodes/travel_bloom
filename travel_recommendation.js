@@ -3,6 +3,14 @@ async function fetchData() {
   return response.json();
 }
 
+document
+  .getElementById("search")
+  .addEventListener("keypress", function (event) {
+    if (event.key === "Enter") {
+      searchFunction();
+    }
+  });
+
 async function searchFunction() {
   let query = document.getElementById("search").value.trim().toLowerCase();
   let data = await fetchData();
