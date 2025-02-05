@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us - Travel Bloom</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: Arial, sans-serif;
+        background: url("background.jpg") no-repeat center center/cover;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: white;
+      }
+      .navbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        padding: 15px 20px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: rgba(0, 0, 0, 0.2); 
+        color: white;
+      }
+      .logo {
+        display: flex;
+        align-items: center;
+        font-size: 24px;
+        font-weight: bold;
+      }
+      .logo img {
+        height: 40px;
+        margin-right: 10px;
+      }
+      .nav-links a {
+        color: white;
+        text-decoration: none;
+        margin: 0 15px;
+        font-size: 18px;
+      }
+      .nav-links a:hover {
+        text-decoration: underline;
+      }
+      .vertical-line {
+        position: absolute;
+        top: 15%;
+        left: 2%;
+        width: 2px;
+        height: 25vh;
+        background: white;
+      }
+      .social-links {
+        position: absolute;
+        top: 55%;
+        left: 1%;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+      .social-links a img {
+        width: 30px;
+        height: 30px;
+      }
+      .contact-form {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: rgba(0, 0, 0, 0.5);
+        padding: 20px;
+        border-radius: 10px;
+        width: 300px;
+        text-align: center;
+      }
+      .contact-form h1 {
+        margin-bottom: 15px;
+      }
+      .contact-form input,
+      .contact-form textarea {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border: none;
+        border-radius: 5px;
+      }
+      .contact-form button {
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        background: #0073e6;
+        color: white;
+        cursor: pointer;
+        width: 100%;
+      }
+      .contact-form button:hover {
+        background: #005bb5;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="logo">
+        <img src="./logo.webp" alt="Travel Bloom Logo" />
+        Travel Bloom
+      </div>
+      <div class="nav-links">
+        <a href="./index.html">Home</a>
+        <a href="./about_us.html">About Us</a>
+        <a href="./contact_us.html">Contact Us</a>
+      </div>
+    </nav>
+    <div class="vertical-line"></div>
+
+    <div class="social-links">
+      <a href="https://x.com/home?lang=en"
+        ><img src="./twitter.png" alt="x"
+      /></a>
+      <a href="https://www.facebook.com/"
+        ><img src="./facebook.png" alt="facebook"
+      /></a>
+      <a href="https://www.instagram.com/"
+        ><img src="./instagram.png" alt="instagram"
+      /></a>
+      <a href="https://www.youtube.com/"
+        ><img src="./youtube.png" alt="youtube"
+      /></a>
+    </div>
+
+    <div class="contact-form">
+      <h1>Contact Us</h1>
+      <form>
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea
+          name="message"
+          rows="4"
+          placeholder="Your Message"
+          required
+        ></textarea>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </body>
+</html>

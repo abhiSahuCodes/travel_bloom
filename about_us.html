@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us - Travel Bloom</title>
+    <style>
+      * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+      }
+      body {
+          font-family: Arial, sans-serif;
+          background: url('background.jpg') no-repeat center center/cover;
+          height: 100vh;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          color: white;
+      }
+      .navbar {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          width: 100%;
+          padding: 15px 20px;
+          position: absolute;
+          top: 0;
+          left: 0;
+          background: rgba(0, 0, 0, 0.2);
+          color: white;
+      }
+      .logo {
+          display: flex;
+          align-items: center;
+          font-size: 24px;
+          font-weight: bold;
+      }
+      .logo img {
+          height: 40px;
+          margin-right: 10px;
+      }
+      .nav-links a {
+          color: white;
+          text-decoration: none;
+          margin: 0 15px;
+          font-size: 18px;
+      }
+      .nav-links a:hover {
+          text-decoration: underline;
+      }
+      .vertical-line {
+          position: absolute;
+          top: 15%;
+          left: 2%;
+          width: 2px;
+          height: 25vh;
+          background: white;
+      }
+      .social-links {
+          position: absolute;
+          top: 55%;
+          left: 1%;
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+      }
+      .social-links a {
+          color: white;
+          font-size: 24px;
+          text-decoration: none;
+      }
+      .social-links a img {
+          width: 30px;
+          height: 30px;
+      }
+      .about-content {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+
+          text-align: center;
+      }
+      .about-content h1 {
+          font-size: 48px;
+          font-weight: bold;
+          margin-bottom: 20px;
+      }
+      .about-content p {
+          font-size: 18px;
+          line-height: 1.6;
+      }
+      .team_segment {
+          display: flex;
+          gap: 50px;
+          margin-top: 100px;
+      }
+      h2 {
+          font-size: 48px;
+      }
+      .team {
+          display: flex;
+          justify-content: space-between;
+          gap: 20px;
+      }
+      .person {
+          background: rgba(0, 0, 0, 0.5);
+          padding: 20px;
+      }
+      .person img {
+          width: 20px;
+          height: 20px;
+      }
+      .person p {
+          font-size: 18px;
+      }
+      .role {
+          font-size: 10px !important
+      }
+      .person_designation {
+          border: none;
+          background: #6082B6;
+          cursor: pointer;
+          padding: 8px;
+          font-size: 16px;
+          color: #ffffff;
+          border-radius: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="logo">
+        <img src="./logo.webp" alt="Travel Bloom Logo" />
+        Travel Bloom
+      </div>
+      <div class="nav-links">
+        <a href="./index.html">Home</a>
+        <a href="./about_us.html">About Us</a>
+        <a href="./contact_us.html">Contact Us</a>
+      </div>
+    </nav>
+    <div class="vertical-line"></div>
+
+    <div class="social-links">
+      <a href="https://x.com/home?lang=en"
+        ><img src="./twitter.png" alt="x"
+      /></a>
+      <a href="https://www.facebook.com/"
+        ><img src="./facebook.png" alt="facebook"
+      /></a>
+      <a href="https://www.instagram.com/"
+        ><img src="./instagram.png" alt="instagram"
+      /></a>
+      <a href="https://www.youtube.com/"
+        ><img src="./youtube.png" alt="youtube"
+      /></a>
+    </div>
+    <div class="about-content">
+      <h1>ABOUT US</h1>
+      <p>
+        Welcome to Travel Bloom! We are a team of passionate individuals
+        dedicated to providing excellent services and products to our customers.
+        Our mission is to provide the best experience for people traveling to
+        different destinations around the world.<br /><br />
+        Our values include integrity, innovation, customer satisfaction, and
+        teamwork. We believe in putting our customers first and working together
+        toward our goals. <br /><br />
+        Feel free to explore our website to learn about what we offer!
+      </p>
+
+      <div class="team_segment">
+        <h2>Our Team</h2>
+        <div class="team">
+          <div class="person">
+            <img src="./profile.png" alt="" />
+            <p class="name">John Doe</p>
+            <p class="role">John is responsible for...</p>
+            <button class="person_designation">CEO</button>
+          </div>
+          <div class="person">
+            <img src="./profile.png" alt="" />
+            <p class="name">Celina Thomas</p>
+            <p class="role">Celina is responsible for...</p>
+            <button class="person_designation">Team Lead</button>
+          </div>
+          <div class="person">
+            <img src="./profile.png" alt="" />
+            <p class="name">Mike Tysen</p>
+            <p class="role">Mike is responsible for...</p>
+            <button class="person_designation">Delivery Head</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

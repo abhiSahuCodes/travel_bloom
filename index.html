@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Travel Bloom</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: Arial, sans-serif;
+        background: url("./background.jpg") no-repeat center center/cover;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .navbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        padding: 15px 20px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: rgba(0, 0, 0, 0.2);
+        color: white;
+      }
+      .logo {
+        display: flex;
+        align-items: center;
+        font-size: 24px;
+        font-weight: bold;
+      }
+      .logo img {
+        height: 40px;
+        margin-right: 10px;
+      }
+      .nav-links a {
+        color: white;
+        text-decoration: none;
+        margin: 0 15px;
+        font-size: 18px;
+      }
+      .nav-links a:hover {
+        text-decoration: underline;
+      }
+      .search-container {
+        display: flex;
+        align-items: center;
+        background: white;
+        padding: 5px;
+        border-radius: 20px;
+        gap: 10px;
+      }
+      .search-container input {
+        border: none;
+        outline: none;
+        padding: 8px;
+        font-size: 16px;
+        border-radius: 20px;
+        width: 300px;
+      }
+      .search-container button {
+        border: none;
+        background: #6082b6;
+        cursor: pointer;
+        padding: 8px;
+        font-size: 16px;
+        color: #ffffff;
+        border-radius: 10px;
+        margin-right: 10px;
+      }
+      .search-container button:hover {
+        color: #005bb5;
+      }
+      .home-content {
+        position: absolute;
+        top: 50%;
+        left: 5%;
+        transform: translateY(-50%);
+        color: #ffffff;
+        max-width: 500px;
+      }
+      .home-content h1 {
+        font-size: 48px;
+        font-weight: bold;
+        margin-bottom: 40px;
+      }
+      .home-content p {
+        font-size: 18px;
+        margin-top: 10px;
+        line-height: 1.5;
+      }
+      .book {
+        border: none;
+        background: #6082b6;
+        cursor: pointer;
+        padding: 8px;
+        font-size: 16px;
+        color: #ffffff;
+        border-radius: 10px;
+        margin-top: 180px;
+      }
+      .vertical-line {
+        position: absolute;
+        top: 15%;
+        left: 2%;
+        width: 2px;
+        height: 25vh;
+        background: white;
+      }
+      .social-links {
+        position: absolute;
+        top: 55%;
+        left: 1%;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+      .social-links a {
+        color: white;
+        font-size: 24px;
+        text-decoration: none;
+      }
+      .social-links a img {
+        width: 30px;
+        height: 30px;
+      }
+      #results {
+        position: absolute;
+        top: 20%;
+        right: 5%;
+        width: 300px;
+        color: white;
+        font-size: 18px;
+        text-align: left;
+      }
+      .result-item {
+        background: rgba(255, 255, 255, 0.1);
+        padding: 10px;
+        margin-bottom: 10px;
+        border-radius: 8px;
+      }
+      .result-item img {
+        width: 100%;
+        border-radius: 8px;
+      }
+      .result-item button {
+        display: block;
+        margin-top: 5px;
+        padding: 5px;
+        background: #0073e6;
+        color: white;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="logo">
+        <img src="./logo.webp" alt="Travel Bloom Logo" />
+        Travel Bloom
+      </div>
+      <div class="nav-links">
+        <a href="./index.html">Home</a>
+        <a href="./about_us.html">About Us</a>
+        <a href="./contact_us.html">Contact Us</a>
+      </div>
+      <div class="search-container">
+        <input
+          type="text"
+          id="search"
+          placeholder="Enter a destination or keyword"
+        />
+        <span class="search-icon">🔍</span>
+        <button onclick="searchFunction()">Search</button>
+        <button onclick="resetFunction()">Clear</button>
+      </div>
+    </nav>
+
+    <div class="vertical-line"></div>
+
+    <div class="social-links">
+      <a href="https://x.com/home?lang=en"
+        ><img src="./twitter.png" alt="x"
+      /></a>
+      <a href="https://www.facebook.com/"
+        ><img src="./facebook.png" alt="facebook"
+      /></a>
+      <a href="https://www.instagram.com/"
+        ><img src="./instagram.png" alt="instagram"
+      /></a>
+      <a href="https://www.youtube.com/"
+        ><img src="./youtube.png" alt="youtube"
+      /></a>
+    </div>
+
+    <div class="home-content">
+      <h1>
+        EXPLORE <br />
+        DREAM <br />
+        DESTINATION
+      </h1>
+      <p>
+        It encourages exploration of unfamiliar territories, embracing diverse
+        cultures and landscapes, while pursuing the desired destination that
+        captivates the heart and ignites a sense of wonder.
+      </p>
+      <button class="book">BOOK NOW</button>
+    </div>
+
+    <div id="results"></div>
+
+    <script src="./travel_recommendation.js"></script>
+  </body>
+
+</html>
